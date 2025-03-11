@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fridge</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+<body>
+<div class="fridge-container">
+    <!-- Header above the fridge -->
+    <h1 class="mainHeader">What's in my fridge?</h1>
+    <div class="fridge">
+        <a th:href="@{/fridge-items}" class="open-fridge-link">Open Fridge</a>
+        <div class="fridge-door">
+            <div class="fridge-handle"></div>
+        </div>
+        <div class="fridge-inside"></div>
+        <div class="fridge-body"></div>
+    </div>
+</div>
+</body>
+</html>

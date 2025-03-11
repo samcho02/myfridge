@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:font-size="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Fridge - Add Food</title>
+  <link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+
+<body>
+<div class="container">
+  <h1 class="mainHeader">Adding Food...</h1>
+  <form method="POST" th:action="@{/fridge-items/add}" th:object="${food}">
+    <div class="form-group">
+      <label for="foodName">Food Name:</label>
+      <input id="foodName" th:field="*{foodName}" type="text" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="foodType">Food Type:</label>
+      <select th:field="*{foodType}" class="form-control">
+        <option th:each="type : ${T(com.samcho.myfridge.model.Food$Type).values()}"
+                th:value="${type}" th:text="${type}"></option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="expirationDate">Expiration Date:</label>
+      <input id="expirationDate" th:field="*{expirationDate}" type="date" class="form-control" required>
+    </div>
+    <div class="button-group">
+      <button type="submit" class="btn-add-food">Add Food</button>
+      <a th:href="@{/fridge-items}" class="btn btn-secondary">Actually nevermind</a>
+    </div>
+  </form>
+
+
+</div>
+</body>
+</html>
