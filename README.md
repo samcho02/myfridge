@@ -42,8 +42,8 @@ Make sure you have the following installed:
     - Create a new database named `myfridge` in MySQL.
 
 2. **Configure Database Connection**
-    - Open `src/main/resources/application.properties`.
-    - Update the `spring.datasource` settings to connect to your database:
+    - Create a application.properties file at `src/main/resources/`.
+    - Configure the `spring.datasource` settings to connect to your database:
 
    ```properties
    spring.datasource.url=jdbc:mysql://localhost:3306/myfridge
