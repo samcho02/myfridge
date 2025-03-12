@@ -75,7 +75,7 @@ Make sure you have the following installed:
     ```angular2html
     http://localhost:8080/fridge-items
     ```
-### Screenshots
+## Screenshots
 Here are some previews of MyFridge in action:
 - The homepage to open the fridge.  
 ![Homepage](src/main/resources/static/images/homepage-closed.png)
