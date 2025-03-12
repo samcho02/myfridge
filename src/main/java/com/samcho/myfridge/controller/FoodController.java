@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/fridge-items")
@@ -75,6 +76,24 @@ public class FoodController {
     @PostMapping("/{id}/delete")
     public String deleteFood(@PathVariable("id") Long id) {
         foodService.deleteFood(id);
+        return "redirect:/fridge-items";
+    }
+
+    @GetMapping("/edit/{id}")
+    public String showEditFood(@PathVariable("id") Long id, Model model) {
+        Optional<Food> food = foodService.findByID(id);
+        if (food.isPresent()) {
+            model.addAttribute("food", food.get());
+            return "edit-food";
+        } else {
+            return "redirect:/fridge-items";
+        }
+    }
+
+    @PostMapping("/edit/{id}")
+    public String editFood(@PathVariable("id") Long id, @ModelAttribute Food food){
+        food.setId(id);
+        foodService.updateFood(food);
         return "redirect:/fridge-items";
     }
 }

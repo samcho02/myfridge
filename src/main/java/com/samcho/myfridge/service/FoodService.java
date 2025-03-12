@@ -5,6 +5,7 @@ import com.samcho.myfridge.repository.FoodRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class FoodService {
@@ -45,5 +46,13 @@ public class FoodService {
      */
     public void deleteFood(Long id) {
         foodRepository.deleteById(id);
+    }
+
+    public Optional<Food> findByID(Long id) {
+        return foodRepository.findById(id);
+    }
+
+    public void updateFood(Food food) {
+        foodRepository.save(food);
     }
 }
