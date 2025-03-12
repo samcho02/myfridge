@@ -76,5 +76,11 @@ Make sure you have the following installed:
     http://localhost:8080/fridge-items
     ```
 ### Screenshots
-![Homepage](static/images/homepage-opened.png)
-![Homepage](static/images/homepage-closed.png)
+Here are some previews of MyFridge in action:
+- The homepage to open the fridge.  
+![Homepage](src/main/resources/static/images/homepage-closed.png)
+![Homepage](src/main/resources/static/images/homepage-opened.png)
+- Food list page the user can see all of their food in the fridge.
+![Foodlistpage](src/main/resources/static/images/food-list.png)
+- Add Food page where the user can add food.
+![AddFoodpage](src/main/resources/static/images/add-food.png)
