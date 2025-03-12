@@ -75,3 +75,6 @@ Make sure you have the following installed:
     ```angular2html
     http://localhost:8080/fridge-items
     ```
+### Screenshots
+![Homepage](static/images/homepage-opened.png)
+![Homepage](static/images/homepage-closed.png)
