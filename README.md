@@ -12,8 +12,8 @@
 
 ## Technology Stack
 
-- **Java** - The backend of the application is built using Java.
-- **Spring Boot** - Backend framework used for the app.
+- **Java (JDK 17)** - The backend of the application is built using Java.
+- **Spring Boot 3.4.3** - Backend framework used for the app.
 - **Spring Data JPA** - For database interaction.
 - **MySQL** - Database for storing food items.
 - **Thymeleaf** - Templating engine for rendering HTML views.
